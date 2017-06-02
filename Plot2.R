@@ -8,7 +8,9 @@ dim(finaldata)
 dateTime <- paste(as.Date(finaldata$Date), finaldata$Time)
 dateTime <- as.POSIXct(dateTime)
 
-##Saving plot2
+##Plotting the graph
 plot(dateTime, finaldata$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power")
+
+##Saving plot2
 dev.copy(png, file = "Plot2.png", height = 480, width = 480)
 dev.off()
